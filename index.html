@@ -6,7 +6,32 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Lowly Todo</title>
-    <link rel="shortcut icon" href="assets/Favicon.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/Favicon.svg"
+      type="image/x-icon"
+    />
   </head>
-  <body></body>
+
+  <body>
+    <main>
+      <section>
+        <h1>Lowly Todo</h1>
+        <input type="text" placeholder="Write your task here" id="input_task" />
+        <div class="box-list">
+          <ul id="list">
+            <li>
+              Create a new task<input
+                class="delete-btn"
+                type="image"
+                src="assets/images/Delete.svg"
+                alt="Delete task"
+              />
+            </li>
+            <!--New tasks will be added here-->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
