@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("./assets/fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("./assets/fonts/MavenPro-Regular.ttf") format("truetype");
+}
+
+:root {
+  --primary-color: #e2d7ee;
+  --secondary-color: #112a46;
+  --shadow-color: #827191;
+  --medium-color: #82719175;
+  --ligth-color: #fdfbff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Maven Pro", sans-serif;
+  color: var(--secondary-color);
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 90vw;
+  height: 90%;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 25px;
+  background: linear-gradient(145deg, var(--primary-color), var(--ligth-color));
+  box-shadow:
+    6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--ligth-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+}
+
+#input_task {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(145deg, var(--primary-color), var(--ligth-color));
+  box-shadow:
+    inset 5px 5px 7px var(--shadow-color),
+    inset -5px -5px 7px var(--ligth-color);
+}
+
+.box-list {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: linear-gradient(145deg, var(--primary-color), var(--ligth-color));
+  box-shadow:
+    inset 5px 5px 10px var(--shadow-color),
+    inset -5px -5px 10px var(--ligth-color);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+ul > li {
+  list-style: none;
+  width: 100%;
+  padding: 1rem 0;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: var(--medium-color);
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.25rem;
+  gap: 1rem;
+  word-break: break-word;
+  cursor: pointer;
+}
+
+ul > li::before {
+  content: url(assets/images/Checkbox.svg);
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.checked::before {
+  content: url(assets/images/Checked.svg);
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  background-color: transparent;
+  background-image: url(assets/images/Delete.svg);
+  background-size: 100%;
+  border: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
+.delete-btn:hover {
+  box-shadow:
+    inset 2px 2px 4px var(--medium-color),
+    inset -2px -2px 4px #fff;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    width: 60vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  input {
+    padding: 0.75rem 2rem;
+  }
+
+  .box-list {
+    padding: 1rem 2rem;
+  }
+}
