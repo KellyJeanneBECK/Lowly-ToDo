@@ -1,5 +1,5 @@
 const inputTask = document.querySelector("#input_task");
-const list = document.querySelector("#list");
+const list = document.querySelector(".box-list");
 
 // Pour créer une nouvelle tâche dans la todo
 inputTask.addEventListener("keypress", (event) => {
