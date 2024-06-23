@@ -23,11 +23,10 @@ inputTask.addEventListener("keypress", (event) => {
 
 // Pour cocher/décocher et supprimer une tâche
 list.addEventListener("click", (event) => {
-  const deleteBtn = document.querySelector(".delete-btn");
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("checked");
     saveData();
-  } else if (event.target === deleteBtn) {
+  } else if (event.target.classList.contains("delete-btn")) {
     event.target.parentElement.remove();
     saveData();
   }
